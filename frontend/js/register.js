@@ -57,7 +57,7 @@ registrationForm.addEventListener("submit", async function (event) {
     console.log(player);
 
     // Send registration request to the backend
-    const response = await fetch("http://localhost:8080/players/register", {
+    const response = await fetch("https://ves-campus-clash-production.up.railway.app/players/register", {
       method: "POST",
 
       headers: {
