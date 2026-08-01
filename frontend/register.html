@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Campus Clash</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <i class="fa-solid fa-trophy bg-icon trophy"></i>
+    <i class="fa-solid fa-gamepad bg-icon gamepad"></i>
+
+    <div class="container">
+      <h1>Player Registration</h1>
+
+      <p class="subtitle">Register now and compete for the highest score!</p>
+
+      <form id="registrationForm">
+        <input
+          type="text"
+          id="fullName"
+          placeholder="Enter Full Name"
+          minlength="3"
+          maxlength="50"
+          required
+        />
+
+        <input
+          type="text"
+          id="institute"
+          placeholder="Enter Institute Name"
+          required
+        />
+
+        <input type="text" id="course" placeholder="Enter Course" required />
+
+        <input
+          type="number"
+          id="year"
+          placeholder="Enter Year"
+          min="1"
+          max="5"
+          required
+        />
+
+        <input
+          type="text"
+          id="instagramHandle"
+          placeholder="Enter Instagram Handle"
+          minlength="3"
+          maxlength="30"
+          required
+        />
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>
