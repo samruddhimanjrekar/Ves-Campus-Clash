@@ -77,7 +77,7 @@ function moveMole() {
 async function saveScore() {
   try {
     const response = await fetch(
-      `http://localhost:8080/players/${playerId}/score`,
+      `https://ves-campus-clash-production.up.railway.app/players/${playerId}/score`,
       {
         method: "PUT",
 
