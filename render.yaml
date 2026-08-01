@@ -1,8 +1,8 @@
 services:
   - type: web
     name: ves-campus-clash-backend
-    runtime: java
+    env: java
+    plan: free
     rootDir: backend/campusclash
     buildCommand: ./mvnw clean install
     startCommand: java -jar target/*.jar
-    plan: free
