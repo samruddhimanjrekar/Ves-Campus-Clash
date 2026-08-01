@@ -44,11 +44,10 @@ body {
 
   z-index: 10;
 
-  width: 480px;
+  width: min(480px, 95vw);
+  padding: 30px;
 
   background: rgba(255, 255, 255, 0.95);
-
-  padding: 45px;
 
   border-radius: 28px;
 
@@ -160,13 +159,16 @@ input {
 #gameBoard {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  width: min(95vw, 390px);
+  gap: 12px;
+
+  width: 100%;
+  max-width: 360px;
+
   margin: auto;
-  padding: 20px;
+  padding: 15px;
+
   background: #4caf50;
-  border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
 }
 
 /* Mole holes */
@@ -178,7 +180,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 55px;
+  font-size:  clamp(30px, 7vw, 55px);
   cursor: pointer;
   transition: 0.2s;
   box-shadow:
@@ -381,27 +383,34 @@ body::after {
 ========================================== */
 
 @media (max-width: 600px) {
+
+  body {
+    padding: 15px;
+    overflow-y: auto;
+  }
+
   .container {
-    width: 95%;
-    padding: 30px;
+    width: 100%;
+    padding: 20px;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
-  #gameBoard {
-    width: 100%;
-    gap: 12px;
-  }
-
-  .hole {
-    width: 85px;
-    font-size: 42px;
+  .subtitle {
+    font-size: 15px;
   }
 
   .game-info {
-    font-size: 18px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #gameBoard {
+    max-width: 320px;
+    gap: 10px;
+    padding: 12px;
   }
 
   button {
